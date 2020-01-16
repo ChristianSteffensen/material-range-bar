@@ -1312,6 +1312,14 @@ public class RangeBar extends View {
         this.mPinTextFormatter = pinTextFormatter;
     }
 
+    public PinView getLeftThumb() {
+        return mLeftThumb;
+    }
+
+    public PinView getRightThumb() {
+        return mLeftThumb;
+    }
+
     // Private Methods /////////////////////////////////////////////////////////
 
     /**
@@ -1721,6 +1729,10 @@ public class RangeBar extends View {
             movePin(mRightThumb, x);
         }
 
+        if (mListener != null) {
+            mListener.onTouchMove(this);
+        }
+
         // If the thumbs have switched order, fix the references.
         if (mIsRangeBar && mLeftThumb.getX() > mRightThumb.getX()) {
             final PinView temp = mLeftThumb;
@@ -1918,6 +1930,8 @@ public class RangeBar extends View {
                                    int rightPinIndex, String leftPinValue, String rightPinValue);
 
         void onTouchStarted(RangeBar rangeBar);
+
+        void onTouchMove(RangeBar rangeBar);
 
         void onTouchEnded(RangeBar rangeBar);
     }
