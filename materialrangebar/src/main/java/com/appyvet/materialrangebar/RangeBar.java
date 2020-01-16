@@ -1317,7 +1317,7 @@ public class RangeBar extends View {
     }
 
     public PinView getRightThumb() {
-        return mLeftThumb;
+        return mRightThumb;
     }
 
     // Private Methods /////////////////////////////////////////////////////////
