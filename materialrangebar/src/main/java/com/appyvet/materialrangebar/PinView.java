@@ -37,7 +37,7 @@ public class PinView extends View {
     // The radius (in dp) of the touchable area around the thumb. We are basing
     // this value off of the recommended 48dp Rhythm. See:
     // http://developer.android.com/design/style/metrics-grids.html#48dp-rhythm
-    private static final float MINIMUM_TARGET_RADIUS_DP = 24;
+    private static final float MINIMUM_TARGET_RADIUS_DP = 34;
 
     // Sets the default values for radius, normal, pressed if circle is to be
     // drawn but no value is given.
